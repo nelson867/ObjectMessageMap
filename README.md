@@ -1,0 +1,2 @@
+# ObjectMessageMap
+Advanced library used to map objects to user messages
