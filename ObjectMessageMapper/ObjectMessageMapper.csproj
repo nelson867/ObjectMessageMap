@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35A65DE6-1B9C-426F-8E5B-AD5B3A2739E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ObjectMessageMapper</RootNamespace>
+    <AssemblyName>ObjectMessageMapper</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Helpers\ConditionalItem.cs" />
+    <Compile Include="Core\MappedItem.cs" />
+    <Compile Include="Core\Mappers\IMapper.cs" />
+    <Compile Include="Core\Mappers\LookupStrategyEnum.cs" />
+    <Compile Include="Core\Mappers\MapperFactory.cs" />
+    <Compile Include="Core\Mappers\TypeMapper.cs" />
+    <Compile Include="Core\Mappers\ValueMapper.cs" />
+    <Compile Include="Core\IMappedItem.cs" />
+    <Compile Include="Core\MessageProcessor.cs" />
+    <Compile Include="Core\Relayers\ConditionalRelayDefault.cs" />
+    <Compile Include="Core\Relayers\ConditionalRelayMessage.cs" />
+    <Compile Include="Core\Relayers\ConditionalRelayWhen.cs" />
+    <Compile Include="Core\Relayers\SelectorRelayDefault.cs" />
+    <Compile Include="Core\Relayers\SelectorRelayFor.cs" />
+    <Compile Include="Core\SelectorConditional.cs" />
+    <Compile Include="Core\SelectorMapper.cs" />
+    <Compile Include="Core\SelectorMapperSub.cs" />
+    <Compile Include="Interfaces\IConditionalUseMessage.cs" />
+    <Compile Include="Interfaces\IConfigurationMapper.cs" />
+    <Compile Include="Interfaces\IConfigureChain.cs" />
+    <Compile Include="Interfaces\IDefaultChain.cs" />
+    <Compile Include="Interfaces\IForChain.cs" />
+    <Compile Include="Interfaces\IMessageData.cs" />
+    <Compile Include="Interfaces\IMessageProcessor.cs" />
+    <Compile Include="Interfaces\ISelectorConditional.cs" />
+    <Compile Include="Interfaces\ISelectorDefault.cs" />
+    <Compile Include="Interfaces\ISelectorMapper.cs" />
+    <Compile Include="Interfaces\IWhenChain.cs" />
+    <Compile Include="Interfaces\IWhenDefaultChain.cs" />
+    <Compile Include="ObjectMessageMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\ResourceProxy.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
